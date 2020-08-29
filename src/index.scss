@@ -1,0 +1,332 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+
+html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Media queries
+@mixin phone {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: 769px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  @include phone {
+    font-size: 1.25rem;
+  }
+  @include tablet {
+    font-size: 1.25rem;
+  }
+  @include desktop {
+    font-size: 1.5vw;
+  }
+  color: #2d2d2d;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+// Colors
+$blue: #4285f4;
+$red: #db4437;
+$yellow: #f4b400;
+$green: #0f9d58;
+$black: #2d2d2d;
+
+// Media queries
+@mixin phone {
+  @media only screen and (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: 769px) and (max-width: 1199px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+// Mixins
+@mixin text {
+  @include phone {
+    font-size: 1.25rem;
+  }
+  @include tablet {
+    font-size: 1.25rem;
+  }
+  @include desktop {
+    font-size: 1.5vw;
+  }
+}
+
+.container {
+  margin: 0 auto;
+  padding: 25px 0;
+
+  @include phone {
+    width: 90%;
+  }
+
+  @include tablet {
+    width: 80%;
+  }
+
+  @include desktop {
+    width: 70%;
+  }
+  display: flex;
+  flex-direction: column;
+}
+
+// Nav
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f2f2f2;
+
+  a {
+    @include text;
+    color: $black;
+    text-decoration: none;
+    padding: 10px 25px;
+  }
+}
+
+h1,
+h2,
+a,
+p,
+button {
+  @include text;
+}
+
+// Item name
+h1 {
+  font-weight: 400;
+}
+
+// Price
+h2 {
+  color: $red;
+}
+
+// Links
+a {
+  color: $blue;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+button {
+  width: 100%;
+  color: #fff;
+  border: none;
+  background-color: $green;
+  padding: 12px 0;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  cursor: pointer;
+  &:disabled {
+    background-color: $yellow;
+    color: $black;
+    cursor: not-allowed;
+  }
+}
+
+img {
+  width: 100%;
+}
+
+.card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+  &:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
+  }
+  border-radius: 5px;
+
+  @include phone {
+    width: 35%;
+  }
+
+  @include tablet {
+    width: 25%;
+  }
+
+  @include desktop {
+    width: 20%;
+  }
+
+  max-width: 20em;
+  padding: 25px;
+  text-align: center;
+
+  img {
+    width: 50%;
+  }
+
+  > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    // View detail
+    a {
+      margin-bottom: 10px;
+    }
+  }
+
+  margin-bottom: 50px;
+
+  @include phone {
+    margin-bottom: 25px;
+  }
+}
+
+.details {
+  display: flex;
+  margin: 100px 0;
+
+  > div {
+    width: 50%;
+
+    // Img
+    &:first-of-type {
+      display: flex;
+      //justify-content: center;
+      align-items: center;
+      img {
+        width: 80%;
+      }
+    }
+
+    // Text
+    &:nth-of-type(2) {
+      > div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        // Back to shopping
+        a {
+          display: block;
+          width: 40%;
+        }
+
+        // Add to bag/Added
+        button {
+          width: 60%;
+          padding: 0;
+        }
+      }
+    }
+  }
+
+  @include phone {
+    flex-direction: column;
+    > div {
+      width: 100%;
+    }
+  }
+
+  @include tablet {
+    width: 90%;
+  }
+}
+
+.bag-item {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 50px 0;
+  border-bottom: 1px solid $black;
+
+  div,
+  h1,
+  h2,
+  p {
+    display: block;
+    width: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  // Button
+  > div:last-of-type {
+    width: 25%;
+    button {
+      background-color: $red;
+    }
+  }
+
+  // Counter
+  span {
+    font-weight: 400;
+    padding: 0 10px;
+    cursor: pointer;
+  }
+  @include phone {
+    > div:first-of-type {
+      width: 100%;
+      img {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.checkout {
+  padding: 25px 0;
+  width: 50%;
+  justify-self: end;
+  align-self: flex-end;
+
+  > div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    button {
+      width: 48%;
+      &:nth-of-type(2) {
+        background-color: $red;
+      }
+    }
+  }
+}
