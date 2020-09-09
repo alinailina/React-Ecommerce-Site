@@ -24,16 +24,17 @@ import {
 
 const Items = [
   {
-    id: 1,
-    name: "Glasses",
-    img: Glasses,
+    id: 16,
+    name: "Coat",
+    img: Coat,
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    price: 25,
+    price: 250,
     inBag: false,
     count: 0,
     total: 0,
   },
+
   {
     id: 2,
     name: "Underpants",
@@ -188,17 +189,7 @@ const Items = [
     count: 0,
     total: 0,
   },
-  {
-    id: 16,
-    name: "Coat",
-    img: Coat,
-    description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    price: 250,
-    inBag: false,
-    count: 0,
-    total: 0,
-  },
+
   {
     id: 17,
     name: "Polo shirt",
@@ -239,6 +230,17 @@ const Items = [
     description:
       "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
     price: 50,
+    inBag: false,
+    count: 0,
+    total: 0,
+  },
+  {
+    id: 1,
+    name: "Glasses",
+    img: Glasses,
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+    price: 25,
     inBag: false,
     count: 0,
     total: 0,

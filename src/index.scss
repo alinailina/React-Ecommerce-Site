@@ -226,6 +226,41 @@ img {
   }
 }
 
+button {
+  @include body-sm;
+  color: $black;
+  font-weight: 400;
+  width: 100%;
+  padding: 15px 0;
+  border: none;
+  font-family: "Roboto Mono", monospace;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-appearance: none;
+  border: 1px solid $black;
+  background-color: white;
+  //border-radius: 50px;
+  &:hover {
+    background-color: #f2f2f2;
+  }
+
+  &:active {
+    background-color: #f2f2f2;
+    border: 1px solid #f2f2f2;
+    outline: none;
+  }
+  &:disabled {
+    color: $black;
+    background-color: $yellow;
+    border: 1px solid $yellow;
+    outline: none;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+  }
+}
+
 .details {
   @include container;
   display: flex;
@@ -269,32 +304,9 @@ img {
           display: block;
           width: 50%;
         }
-
-        // Add to bag/Added
         button {
-          @include body;
-          color: white;
           width: 50%;
-          border: none;
-          font-family: "Roboto Mono", monospace;
-          text-transform: uppercase;
-          background-color: $green;
-          cursor: pointer;
-          -webkit-appearance: none;
-
-          &:hover,
-          &:active,
-          &:disabled {
-            color: $black;
-            background-color: $yellow;
-            outline: none;
-          }
-
-          &:disabled {
-            cursor: not-allowed;
-          }
           padding: 0;
-          margin: 0;
         }
       }
     }
@@ -327,40 +339,6 @@ img {
   p,
   a {
     @include body;
-  }
-}
-button {
-  @include body-sm;
-  color: $black;
-  font-weight: 400;
-  width: 100%;
-  padding: 15px 0;
-  border: none;
-  font-family: "Roboto Mono", monospace;
-  text-transform: uppercase;
-  cursor: pointer;
-  -webkit-appearance: none;
-  border: 1px solid $black;
-  background-color: white;
-  //border-radius: 50px;
-  &:hover {
-    background-color: #f2f2f2;
-  }
-
-  &:active {
-    background-color: #f2f2f2;
-    border: 1px solid #f2f2f2;
-    outline: none;
-  }
-  &:disabled {
-    color: $black;
-    background-color: $yellow;
-    border: 1px solid $yellow;
-    outline: none;
-  }
-
-  &:disabled {
-    cursor: not-allowed;
   }
 }
 
