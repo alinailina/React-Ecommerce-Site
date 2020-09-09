@@ -27,8 +27,8 @@ const Details = () => {
                 <p>{description}</p>
                 <h2>{price} €</h2>
                 <div>
-                  {" "}
                   <Link to="/">Back to shopping</Link>
+
                   <button
                     disabled={inBag ? true : false}
                     onClick={() => value.addToBag(id)}

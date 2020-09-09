@@ -6,9 +6,9 @@ const Item = ({ item, value }) => {
   return (
     <div className="bag-item">
       <div>
-        <img src={img} alt="name" />
+        <img src={img} alt={name} />
       </div>
-      <h1>{name}</h1>
+      <p>{name}</p>
       <h2>{price} €</h2>
       <p>
         <span onClick={() => decrementCount(id)}>&#8722;</span> {count}{" "}

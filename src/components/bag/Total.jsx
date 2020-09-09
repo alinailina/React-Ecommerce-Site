@@ -6,8 +6,8 @@ const Total = ({ value }) => {
   return (
     <div className="checkout">
       <p>Subtotal: {subTotal} €</p>
-      <p>Tax: {tax} €</p>
-      <p>Total: {total} € (15%)</p>
+      <p>Tax: {tax} € (15%)</p>
+      <p>Total: {total} € </p>
       <div>
         <button>Checkout</button>
         <button onClick={() => emptyBag()}>Empty bag</button>

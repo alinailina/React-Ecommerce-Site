@@ -10,10 +10,10 @@ const Item = ({ item }) => {
   const inBag = item.inBag;
 
   return (
-    <div className="card">
-      <h1>{name}</h1>
+    <div className="item">
+      <h2>{name}</h2>
       <img src={img} alt={name} />
-      <h2>{price}$</h2>
+      <h3>{price}€</h3>
 
       <ContextConsumer>
         {(value) => (
